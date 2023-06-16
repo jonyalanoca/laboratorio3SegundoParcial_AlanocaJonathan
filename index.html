@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Laboratorio3</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estiloLoad.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <input type="checkbox" name="asdf" id="checkLoad" class="checkLoad">
+    <section class="loadHamster">
+        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+            <div class="wheel"></div>
+            <div class="hamster">
+                <div class="hamster__body">
+                    <div class="hamster__head">
+                        <div class="hamster__ear"></div>
+                        <div class="hamster__eye"></div>
+                        <div class="hamster__nose"></div>
+                    </div>
+                    <div class="hamster__limb hamster__limb--fr"></div>
+                    <div class="hamster__limb hamster__limb--fl"></div>
+                    <div class="hamster__limb hamster__limb--br"></div>
+                    <div class="hamster__limb hamster__limb--bl"></div>
+                    <div class="hamster__tail"></div>
+                </div>
+            </div>
+            <div class="spoke"></div>
+        </div>
+    </section>
+
+    <input type="checkbox" name="asdf" id="checkError" class="checkError">
+    <section class="seccion__error">
+        <div class="errorContainer">            
+            <div class="mensajeContainer">
+                <div class="mensajeNumero">404!</div>
+                <p class="mensaje">No se puedo realizar la operacion</p>
+            </div>
+            <div class="imagen">
+                <figure class="imagenContainer"><img src="imagenes/luz.jpg" alt=""></figure>
+                <figure class="imagenContainer"><img src="imagenes/perro.jpg" alt=""></figure>
+            </div>
+            <button id="error__volver" class="error__volver boton">Volver</button>
+        </div>
+    </section>
+    
+    
+    <section id="seccionTabla" class="seccionTabla">
+        <div class="container">
+            <h2 class="subtitulo">Formulario Lista</h2>
+            <table id="tabla" class="tabla">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Modelo</th>
+                        <th>Año fabricación</th>
+                        <th>Velocidad Maxima</th>
+                        <th>Altura Max</th>
+                        <th>Antonomia</th>
+                        <th>Cant. Puertas</th>
+                        <th>Cant. Ruedas</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+            <button id="btnTablaAgregar" class="boton"> Agregar</button>
+        </div>
+    </section>
+
+
+    <section id="seccionABM"  class="seccionABM">
+        <div class="formularioABMContainer">
+            <h1 class="subtitulo">Formulario ABM</h2>
+            <h2 id="subtituloABM" class="subtituloABM"></h2>
+            <div class="ABM_idContainer">
+                <label for="idForm">Id: </label>
+                <input type="text" class="idForm" disabled id="idForm">
+            </div>
+            <label for="modeloForm">Modelo</label>
+            <input type="text" id="modeloForm">
+            <span id="spanModeloForm"class="validacionSpan"></span>
+            <label for="anoFabForm">Año de fabricación</label>
+            <input type="text" id="anoFabForm">
+            <span id="spanAnoFabForm"class="validacionSpan"></span>
+            <label for="velMaxForm">Velocidad maxima</label>
+            <input type="text" id="velMaxForm">
+            <span id="spanVelMaxForm"class="validacionSpan"></span>
+
+            <label for="formSelectOption">Tipo de Veiculo</label>
+            <select id="formSelectOption">
+                <option value="Aereo">Aereo</option>
+                <option value="Terrestre">Terrestre</option>
+            </select>
+
+            <div id="formSelectionOpcion1" class="formSelectionOpcion1">
+                <div class="formSelectionOpcion1--container" >
+                    <label for="atlMaxForm">Altura Maxima</label>
+                    <input type="text" id="atlMaxForm"> 
+                    <span id="spanAtlMaxForm" class="validacionSpan"></span>
+                </div>
+                <div class="formSelectionOpcion1--container">
+                    <label for="atonomiasForm">Autonomia</label>
+                    <input type="text" id="atonomiasForm"> 
+                    <span id="spanAtonomiasForm"class="validacionSpan"></span>
+                </div>
+            </div>
+            <div id="formSelectionOpcion2" class="formSelectionOpcion2">
+                <div>
+                    <label for="cantPueForm">Cantidad de Puertas</label>
+                    <input type="text" id="cantPueForm">
+                    <span id="spanCantPueForm" class="validacionSpan"></span>
+                </div>
+                <div>
+                    <label for="cantRueForm">Cantidad de Ruedas</label>
+                    <input type="text" id="cantRueForm"> 
+                    <span id="spanCantRueForm" class="validacionSpan"></span>
+                </div>
+            </div>
+            <button id="bntABMAceptar" class="boton">Aceptar</button>
+            <button id="bntABMCancelar" class="boton">Cancelar</button>
+        </div>
+        
+    </section>
+    
+</body>
+</html>

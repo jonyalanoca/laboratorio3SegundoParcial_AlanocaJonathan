@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --colorFondo:#1E1E1E;
+    --colorFondoClaro:#2d2d2d;
+    --colorLetra:#FFFFFF;
+    --colorLetraSecundario:#9e9e9e;
+    --colorBoton:#0085FF;
+    --colorBotonContraste:#006FFF;
+    --colorBotonSecundario:#69B4FF;
+}
+body{
+    background-color:var(--colorFondo);
+    color:var(--colorLetra);
+    max-height: 100vh;
+    overflow: hidden;
+}
+input{
+    outline: none;
+}
+.seccionABM, .seccionTabla{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondo);
+}
+.seccionABM{
+    position: absolute;
+    top: 100%;
+    transition: top 2s;
+}
+
+.container{
+    width: 80%;
+}
+.subtitulo{
+    text-align: center;
+}
+
+.tabla, .formularioABMContainer{
+    background-color: var(--colorFondoClaro);
+    width: 100%;
+}
+.tabla>tbody{
+    color:var(--colorLetraSecundario);
+}
+.tabla thead{
+    background-color: var(--colorFondo);
+}
+.tabla tbody tr td{
+    padding-left: 10px;
+}
+.boton{
+    all: unset;
+    background-image: linear-gradient(to right, var(--colorBoton) 20%, var(--colorBotonSecundario) 100%);
+    cursor: pointer;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+}
+.btnTabla{
+    all: unset;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4px;
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.btnModificar{
+    color: var(--colorLetra);
+    background-color: var(--colorBoton);
+}
+.btnEliminar{
+    color: var(--colorLetra);
+    background-color: var(--colorBotonSecundario);
+}
+.imagenBoton{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+
+.formularioABMContainer{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(167, 165, 165, 0.418);
+}
+.formSelectionOpcion1, .formSelectionOpcion2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.formSelectionOpcion1--container{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+/* .formSelectionOpcion2>div{
+    display: flex;
+    flex-direction: column;
+} */
+.validacionSpan{
+    color: crimson;
+}
+.checkLoad:checked+.loadHamster{
+    clip-path: circle(100% at 50% 50%);
+}
+.checkLoad{
+    display: none;
+}
+.loadHamster{
+    background-color: var(--colorFondoClaro);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path .5s;
+    position: absolute;
+}
+
+
+
+.seccion__error{
+    background-color: #FFFFFF;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path .5s;
+    position: absolute;
+    z-index: 100;
+}
+.errorContainer{
+    width: 70%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    /* background-color: brown; */
+    justify-content: space-evenly;
+}
+.imagenContainer>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.mensajeNumero{
+    font-size: 7rem;
+    font-weight: bold;
+}
+.checkError{
+    display: none;
+}
+.checkError:checked + .seccion__error{
+    clip-path: circle(100% at 50% 50%);
+}
